@@ -17,7 +17,8 @@
     "description": "An experimental portfolio website built with Svelte. Also space themed ;)",
     "stack": ["Svelte", "JavaScript"],
     "images": ["/assets/projects/Sveltesite.png"],
-    "repoUrl":"https://github.com/DDibyajyot/portfolio-website"
+    "repoUrl":"https://github.com/DDibyajyot/portfolio-website",
+    "liveUrl": "https://deepam-dibyajyot.netlify.app"
   },
   {
     "_id": "3",
@@ -48,7 +49,8 @@
     "description": "This website you're on right now! I built it using Next.js, TailwindCSS and a Sanity backend. It was meant to be space themed, as a tribute to my love for space and astronomy.",
     "stack": ["Next.js", "TailwindCSS", "Sanity", "JavaScript", "React"],
     "images": ["/assets/projects/webf.png"],
-    "repoUrl": ""
+    "repoUrl": "https://github.com/DDibyajyot/personal-website",
+    "liveUrl": "https://deepamdibyajyot.me"
   },
   {
     "_id": "6",
