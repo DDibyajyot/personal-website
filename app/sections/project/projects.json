@@ -1,0 +1,62 @@
+[
+  {
+        "_id": "1",
+    "createdAt": "2021-08-02T15:01:00.000Z",
+    "active": true,
+    "title": "EdEasy",
+    "description": "A web app that helps in aggregating and organizing free open-source educational materials by grade, making education accessible worldwide with just an internet connection.",
+    "stack": ["React", "Python", "JavaScript","Flask", "SQLAlchemy"],
+    "images": ["/assets/projects/EDeasy.jpeg"],
+    "repoUrl": "https://github.com/DDibyajyot/EDeasy-final"
+  },
+  {
+    "_id": "2",
+    "createdAt": "2021-08-02T15:02:00.000Z",
+    "active": true,
+    "title": "Svelte Project",
+    "description": "An experimental portfolio website built with Svelte. Also space themed ;)",
+    "stack": ["Svelte", "JavaScript"],
+    "images": ["/assets/projects/Sveltesite.png"],
+    "repoUrl":"https://github.com/DDibyajyot/portfolio-website"
+  },
+  {
+    "_id": "3",
+    "createdAt": "2021-08-02T15:02:00.000Z",
+    "active": true,
+    "title": "CIFAR-10 Image Classifier",
+    "description": "Implemented a Convolutional Neural Network to classify images from the CIFAR-10 dataset , with an accuracy of 84%. The model was trained using TensorFlow and the Flask backend was used to serve the model as an API.",
+    "stack": ["Python", "PyTorch"],
+    "images": ["/assets/projects/cifar10.png"],
+    "repoUrl": "https://github.com/DDibyajyot/computer-vision-bootcamp"
+
+  },
+  {
+    "_id": "4",
+    "createdAt": "2021-08-02T15:03:00.000Z",
+    "active": true,
+    "title": "PriceMatch",
+    "description": "A web app that allows users to take a picture of a product, recognizes it using Google Cloud Vision and catalogues it with a list of stores and prices, comparing the prices in each store.",
+    "stack": ["React", "Python", "Flask", "Google Cloud Vision","JavaScript", "TensorFlow", "FireBase"],
+    "images": ["/assets/projects/pricematch.jpeg"],
+    "repoUrl": "https://github.com/DDibyajyot/PriceMatch"
+  },
+  {
+    "_id": "5",
+    "createdAt": "2021-08-02T15:04:00.000Z",
+    "active": true,
+    "title": "Personal Website",
+    "description": "This website you're on right now! I built it using Next.js, TailwindCSS and a Sanity backend. It was meant to be space themed, as a tribute to my love for space and astronomy.",
+    "stack": ["Next.js", "TailwindCSS", "Sanity", "JavaScript", "React"],
+    "images": ["/assets/projects/webf.png"],
+    "repoUrl": ""
+  },
+  {
+    "_id": "6",
+    "createdAt": "2021-08-02T15:05:00.000Z",
+    "active": true,
+    "title": "MovieMatch",
+    "description": "This is a secret. For now. Maybe forever (no). ",
+    "stack": [],
+    "images": ["/assets/projects/secret.png"]
+  }
+]

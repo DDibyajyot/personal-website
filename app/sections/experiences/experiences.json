@@ -1,0 +1,37 @@
+[
+    {
+        "_id": "1",
+        "JobTitle": "Full Stack Developer",
+        "Company": "Xe.com",
+        "DateTime": "Jan 2023 - Apr 2023",
+        "DescriptionPoints": [
+        "Overhauled Public Transfer pages by migrating PHP pages to Next.js, increasing performance by 37% and serving over 1.6+ billion annual visits.",
+        "Visualized real-time currency chart by deploying custom D3.js components, increasing engagement by 35%.",
+        "Revamped the sitemap architecture, employed XML separation yielding 15% increase in SEO optimizations.",
+        "Created destination pages with Contentful CMS, GraphQL and AWS, leading to 45% increase in money transfers in popular corridors."
+    ]
+
+    },
+    {
+        "_id": "2",
+        "JobTitle": "Computer Vision Developer",
+        "Company": "Waterloo Aerial Robotics Group",
+        "DateTime": "Jul 2022 - Present",
+        "DescriptionPoints": [
+            "Engineering an autonomous UAV to compete in various international UAS student competitions.",
+            "Developed a robust object detection pipeline for detecting various objects using YOLOv3 and a custom dataset.",
+            "Implemented a CIFAR-10 classifier using a PyTorch convolutional neural network (84% accuracy)."
+        ]
+
+    },
+    {
+        "_id": "3",
+        "JobTitle": "Software Developer",
+        "Company": "CAA Club Group",
+        "DateTime": "May 2022 - Aug 2022",
+        "DescriptionPoints": [
+            "Implemented the employee portal on Next.js and MaterialUI, supporting an userbase of 4500+ employees.",
+            "Created REST APIs in MuleSoft/SoapUI and Axios for security audits, dynamic update of user info and database communication.",
+            "Developed real-time deployment portal, resulting in 225% faster response time to road-side emergencies."]
+    }
+]
