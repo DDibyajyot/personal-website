@@ -1,6 +1,6 @@
 const author = "Deepam Dibyajyot";
 const description =
-	"Software developer from Moldova, Republic of, who loves to develop beautiful websites, single page applications, customer relationship management or code from scratch using React and Next.js";
+	"Software developer studying at University of Waterloo. I thrive on working with new technologies to build exciting projects, including full-stack development. Currently, I'm exploring cloud computing and machine learning,";
 const url = "https://deepamdibyajyot.netlify.app";
 export const AppMetadata = {
   metadataBase: new URL("https://deepamdibyajyot.netlify.app/"),
