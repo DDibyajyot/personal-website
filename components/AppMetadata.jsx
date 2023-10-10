@@ -35,13 +35,13 @@ export const AppMetadata = {
     siteName: `${author} | Portfolio`,
     images: [
       {
-        url: "https://deepamdibyajyot.netlify.app/public/assets/projects/website.png",
+        url: "https://deepamdibyajyot.netlify.app/website.png",
         width: 800,
         height: 600,
         alt: "Personal portfolio website",
       },
       {
-        url: "https://deepamdibyajyot.netlify.app/public/assets/projects/website.png",
+        url: "https://deepamdibyajyot.netlify.app/website.png",
         width: 1800,
         height: 1600,
         alt: "Personal portfolio website",
