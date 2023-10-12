@@ -14,7 +14,7 @@ export function ExperienceSection() {
         <LazyMotion features={domAnimation}>
             <section id="experience" className="section">
                 <HeadingDivider title="Experience" />
-                <div className="pt-10 pb-16 max-w-6xl flex flex-col gap-3">
+                <div className="pt-10 pb-16  flex flex-col gap-3">
                     <div
                         tabIndex="0"
                         ref={ref}
