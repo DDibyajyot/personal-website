@@ -10,8 +10,6 @@ export default function ExperiencePanel() {
       style={{
         backgroundColor: "rgba(0, 0, 0, 0)",
         width: "100%", // Set the width to 100% for all screen sizes
-        // display: "flex",
-        // flexDirection: "column",
       }}
     >
       <Tab.Group>
@@ -42,9 +40,7 @@ export default function ExperiencePanel() {
               key={experience.JobTitle}
               className="bg-[rgba(0,0,0,0)] rounded-xl p-3 transition-transform duration-300 ease-in-out transform translate-x-0"
               style={{
-                // Set the width to 100% on normal screens
                 width: "100%",
-                // Set the width to auto on smaller screens (e.g., mobile)
                 "@media (max-width: 640px)": {
                   width: "auto",
                 },
