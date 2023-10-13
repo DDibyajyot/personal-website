@@ -1,5 +1,17 @@
 @tailwind components;
 
+@media (max-width: 768px) {
+	.btn {
+		margin-bottom: 10px;
+		margin-right: 0px;
+	}
+
+	.resume {
+		margin-top: 10px;
+		margin-left: 0px;
+	}
+}
+
 @layer components {
 	.section {
 		@apply py-12 md:py-16;

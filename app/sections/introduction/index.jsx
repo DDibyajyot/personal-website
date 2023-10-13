@@ -124,7 +124,10 @@ export function WelcomeSection() {
                 aria-label="Latest projects"
                 style={
                   //change color of button to #29cce9
-                  { backgroundColor: "#29cce9", color: "black" }
+                  { 
+                    backgroundColor: "#29cce9", color: "black",
+
+                   }
 
                 }
               >
@@ -137,7 +140,10 @@ export function WelcomeSection() {
                 download="resume.pdf" // Add the 'download' attribute with the desired file name
                 style={
                   //change color of button to #29cce9
-                  { backgroundColor: "#29cce9", color: "black" }
+                  { 
+                    backgroundColor: "#29cce9", color: "black",
+
+                     }
                 }
               >
                 Check out my resume!
