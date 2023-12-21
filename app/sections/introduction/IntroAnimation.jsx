@@ -44,8 +44,8 @@ export function WelcomeAnimation() {
       style={{
         transform: isInView ? "none" : "translateX(100px)",
         opacity: isInView ? 1 : 0,
-        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1s",
-		marginTop: "-140px",
+        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)",
+		marginTop: "-100px",
       }}
     >
       <ParticleImage
