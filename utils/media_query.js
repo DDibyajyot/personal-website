@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 
-export const useMediaQuery = (matchMediaQuery = "max-width: 767px") => {
+export const useMediaQuery = (matchMediaQuery = "maxWidth: 767px") => {
 	const [targetReached, setTargetReached] = useState(false);
 
 	const updateTarget = useCallback((e) => {

@@ -20,7 +20,14 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "baseUrl": ".",  // This makes the root directory the base path
+    "paths": {
+      "components/*": ["components/*"],
+      "constants/*": ["constants/*"],
+      "context/*": ["context/*"],
+      "hooks/*": ["hooks/*"]
+    }
   },
   "include": [
     "next-env.d.ts",

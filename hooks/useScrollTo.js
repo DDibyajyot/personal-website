@@ -6,7 +6,7 @@ export function useScrollTo() {
 
 	useEffect(() => {
 		const handleResize = () => {
-			if (window.matchMedia("(max-width: 480px)")) {
+			if (window.matchMedia("(maxWidth: 480px)")) {
 				setHeight(56);
 			} else {
 				setHeight(navigationHeight);

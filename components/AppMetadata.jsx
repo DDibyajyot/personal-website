@@ -1,7 +1,8 @@
 const author = "Deepam Dibyajyot";
 const description =
-	"Software developer studying at University of Waterloo. I thrive on working with new technologies to build exciting projects, including full-stack development. Currently, I'm exploring cloud computing and machine learning,";
+  "Software developer studying at University of Waterloo. I thrive on working with new technologies to build exciting projects, including full-stack development. Currently, I'm exploring cloud computing and machine learning.";
 const url = "https://deepamdibyajyot.netlify.app";
+
 export const AppMetadata = {
   metadataBase: new URL("https://deepamdibyajyot.netlify.app/"),
   title: {
@@ -18,16 +19,18 @@ export const AppMetadata = {
     "Frontend developer",
     "Fullstack developer",
     "Data Engineer",
-    "Data Scientise",
-    "Data Analayst",
+    "Data Scientist",
+    "Data Analyst",
     "ML developer",
     "AI developer",
     "Portfolio website",
     "Frontend Developer Portfolio",
+    "Fullstack Developer Portfolio",
+    "Machine Learning Engineer Portfolio",
+    "ERP Systems Consultant"
   ],
   creator: author,
   authors: [{ name: author, url: url }],
-  colorScheme: "dark",
   openGraph: {
     title: `${author} | Portfolio`,
     description: description,
@@ -50,4 +53,9 @@ export const AppMetadata = {
     locale: "en-US",
     type: "website",
   },
+};
+
+// Move viewport to a separate export
+export const viewport = {
+  colorScheme: "dark",
 };

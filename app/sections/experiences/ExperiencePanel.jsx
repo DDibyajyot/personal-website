@@ -41,7 +41,7 @@ export default function ExperiencePanel() {
               className="bg-[rgba(0,0,0,0)] rounded-xl p-3 transition-transform duration-300 ease-in-out transform translate-x-0"
               style={{
                 width: "100%",
-                "@media (max-width: 640px)": {
+                "@media (maxWidth: 640px)": {
                   width: "auto",
                 },
               }}

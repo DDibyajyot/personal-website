@@ -1,7 +1,7 @@
 "use client";
 
-import { WelcomeSection, AboutSection, TechnologiesSection, ProjectsSection } from "app/sections";
-import { ExperienceSection } from "app/sections/experiences";
+import { WelcomeSection, AboutSection, TechnologiesSection, ProjectsSection } from "./sections";
+import { ExperienceSection } from "./sections/experiences";
 
 
 export default function Page() {
