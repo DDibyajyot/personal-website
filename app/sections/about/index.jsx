@@ -49,8 +49,8 @@ export function AboutSection() {
             </p>
             <br></br>
             <p>
-              I'm actively seeking a co-op/internship opportunity for Summer
-              2024. Check out my resume{" "}
+              I'm actively seeking a co-op/internship opportunity for Spring
+              2025. Check out my resume{" "}
               <a className="about-me" href="/assets/resume.pdf">
                 here
               </a>{" "}
