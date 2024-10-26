@@ -1,4 +1,9 @@
-import { BsFillEnvelopeOpenFill, BsGithub, BsLinkedin, BsInstagram } from "react-icons/bs";
+import {
+  BsFillEnvelopeOpenFill,
+  BsGithub,
+  BsLinkedin,
+  BsInstagram,
+} from "react-icons/bs";
 
 export const SOCIAL_MEDIA = [
   {

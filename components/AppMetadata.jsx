@@ -16,8 +16,10 @@ export const AppMetadata = {
   keywords: [
     "Deepam Dibyajyot",
     "Deepam Dibyajyot - software developer",
-    "Frontend developer",
-    "Fullstack developer",
+    "Software Engineer",
+    "Software Developer",
+    "Frontend Developer",
+    "Fullstack Developer",
     "Data Engineer",
     "Data Scientist",
     "Data Analyst",
@@ -27,7 +29,7 @@ export const AppMetadata = {
     "Frontend Developer Portfolio",
     "Fullstack Developer Portfolio",
     "Machine Learning Engineer Portfolio",
-    "ERP Systems Consultant"
+    "ERP Systems Consultant",
   ],
   creator: author,
   authors: [{ name: author, url: url }],

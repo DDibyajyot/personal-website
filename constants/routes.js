@@ -1,3 +1,3 @@
 export const SITE_ROUTES = {
-	home: "/",
+  home: "/",
 };

@@ -5,11 +5,11 @@ import { LazyMotion, domAnimation, useInView } from "framer-motion";
 import { ConnectMedia, ScrollTop } from "components";
 
 export function AppFooter() {
-	const footerRef = useRef(null);
-	const isInView = useInView(footerRef, { once: true });
-	const year = new Date().getFullYear();
+  const footerRef = useRef(null);
+  const isInView = useInView(footerRef, { once: true });
+  const year = new Date().getFullYear();
 
-	return (
+  return (
     <LazyMotion features={domAnimation}>
       <footer
         ref={footerRef}

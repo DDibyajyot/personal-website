@@ -1,4 +1,9 @@
-import { AiFillHtml5, AiOutlineAntDesign, AiFillGithub, AiFillGitlab } from "react-icons/ai";
+import {
+  AiFillHtml5,
+  AiOutlineAntDesign,
+  AiFillGithub,
+  AiFillGitlab,
+} from "react-icons/ai";
 import { DiCss3, DiVisualstudio } from "react-icons/di";
 import { IoLogoJavascript } from "react-icons/io";
 import { FaReact, FaWordpressSimple, FaFigma, FaTrello } from "react-icons/fa";
@@ -47,16 +52,12 @@ export const TECHNOLOGIES = [
     items: [
       { name: "Pytorch", icon: <SiPytorch size={32} /> },
       { name: "Tensorflow", icon: <SiTensorflow size={32} /> },
-	  { name: "Pandas", icon: <SiPandas size={32} /> },
-	  { name: "Numpy", icon: <SiNumpy size={32} /> },
-	  { name: "Scikit-learn", icon: <SiScikitlearn size={32} /> },
-	  { name: "Google Cloud Vision", icon: <SiGooglecloud size={32} /> },
-	  { name: "Flask", icon: <SiFlask size={32} /> },
-	  { name: "D3.js", icon: <SiD3Dotjs size={32} /> },
-
-
-
-
+      { name: "Pandas", icon: <SiPandas size={32} /> },
+      { name: "Numpy", icon: <SiNumpy size={32} /> },
+      { name: "Scikit-learn", icon: <SiScikitlearn size={32} /> },
+      { name: "Google Cloud Vision", icon: <SiGooglecloud size={32} /> },
+      { name: "Flask", icon: <SiFlask size={32} /> },
+      { name: "D3.js", icon: <SiD3Dotjs size={32} /> },
     ],
   },
   {
@@ -64,7 +65,7 @@ export const TECHNOLOGIES = [
     items: [
       { name: "React", icon: <FaReact size={32} /> },
       { name: "Next", icon: <TbBrandNextjs size={32} /> },
-	  { name: "Svelte", icon: <SiSvelte size={32} /> },
+      { name: "Svelte", icon: <SiSvelte size={32} /> },
       { name: "Tailwind CSS", icon: <TbBrandTailwind size={32} /> },
       { name: "HTML", icon: <AiFillHtml5 size={32} /> },
       { name: "CSS", icon: <DiCss3 size={32} /> },
@@ -75,38 +76,37 @@ export const TECHNOLOGIES = [
       { name: "HeadlessUI", icon: <HeadlessUiIcon width={32} /> },
       { name: "GraphQl", icon: <GrGraphQl size={32} /> },
       { name: "Contentful CMS", icon: <SiContentful size={32} /> },
-	  { name: "Firebase", icon: <SiFirebase size={32} /> },
-	  { name: "D3.js", icon: <SiD3Dotjs size={32} /> },
+      { name: "Firebase", icon: <SiFirebase size={32} /> },
+      { name: "D3.js", icon: <SiD3Dotjs size={32} /> },
     ],
   },
   {
     category: "Languages",
     items: [
-	  { name: "Python", icon: <SiPython size={32} /> },
-	  { name: "Javascript", icon: <SiJavascript size={32} /> },
-	  { name: "C", icon: <SiC size={32} /> },
-	  { name: "C++", icon: <SiCplusplus size={32} /> },
-	  { name: "Racket", icon: <SiRacket size={32} /> },
-	  { name: "Bash", icon: <SiGnubash size={32} /> },
+      { name: "Python", icon: <SiPython size={32} /> },
+      { name: "Javascript", icon: <SiJavascript size={32} /> },
+      { name: "C", icon: <SiC size={32} /> },
+      { name: "C++", icon: <SiCplusplus size={32} /> },
+      { name: "Racket", icon: <SiRacket size={32} /> },
+      { name: "Bash", icon: <SiGnubash size={32} /> },
     ],
   },
   {
     category: "Other tools",
     items: [
-	  { name: "AWS", icon: <SiAmazonaws size={32} /> },
-	  { name: "MySQL", icon: <SiMysql size={32} /> },
-	  { name: "PostgreSQL", icon: <SiPostgresql size={32} /> },
+      { name: "AWS", icon: <SiAmazonaws size={32} /> },
+      { name: "MySQL", icon: <SiMysql size={32} /> },
+      { name: "PostgreSQL", icon: <SiPostgresql size={32} /> },
       { name: "Jira", icon: <JiraIcon width={32} /> },
       { name: "Figma", icon: <FaFigma size={32} /> },
-	  { name: "Asana", icon: <TbBrandAsana size={32} /> },
+      { name: "Asana", icon: <TbBrandAsana size={32} /> },
       { name: "Github", icon: <AiFillGithub size={32} /> },
       { name: "Gitlab", icon: <AiFillGitlab size={32} /> },
       { name: "VsCode", icon: <DiVisualstudio size={32} /> },
-	  { name: "Google Colab", icon: <SiGooglecolab size={32} /> },
-	  { name: "Jupyter", icon: <SiJupyter size={32} /> },
-	  { name: "Postman", icon: <SiPostman size={32} /> },
-	  { name: "MongoDB", icon: <SiMongodb size={32} /> },
-
+      { name: "Google Colab", icon: <SiGooglecolab size={32} /> },
+      { name: "Jupyter", icon: <SiJupyter size={32} /> },
+      { name: "Postman", icon: <SiPostman size={32} /> },
+      { name: "MongoDB", icon: <SiMongodb size={32} /> },
     ],
   },
 ];

@@ -4,12 +4,11 @@ import { useRef } from "react";
 import { LazyMotion, domAnimation, useInView } from "framer-motion";
 import { HeadingDivider } from "components";
 
-
 export function AboutSection() {
-	const ref = useRef(null);
-	const isInView = useInView(ref, { once: true });
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
-	return (
+  return (
     <LazyMotion features={domAnimation}>
       <section id="about" className="section">
         <HeadingDivider title="About me" />

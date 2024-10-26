@@ -1,6 +1,6 @@
 @tailwind base;
 @layer base {
-	body {
-		@apply text-brand-dark dark:text-brand-light;
-	}
+  body {
+    @apply text-brand-dark dark:text-brand-light;
+  }
 }

@@ -6,18 +6,17 @@ import { LazyMotion, domAnimation, useInView } from "framer-motion";
 import { WelcomeAnimation } from "./IntroAnimation";
 import { useScrollTo } from "hooks";
 import { useMediaQuery } from "utils";
-import  ParticlesBg  from "components/ParticlesBackground.jsx";
-
+import ParticlesBg from "components/ParticlesBackground.jsx";
 
 export function WelcomeSection() {
-	const ref = useRef(null);
-	const introRef = useRef(null);
-	const isInView = useInView(ref, { once: true });
-	const { scrollToEl } = useScrollTo();
-	const isTabletUp = useMediaQuery("min-width: 768px");
+  const ref = useRef(null);
+  const introRef = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const { scrollToEl } = useScrollTo();
+  const isTabletUp = useMediaQuery("min-width: 768px");
 
-	let [count, setCount] = useState(0);
-	const [text] = useState([
+  let [count, setCount] = useState(0);
+  const [text] = useState([
     "convert design into modern UI",
     "build interactive UI using React",
     "develop websites using Next.js",
@@ -28,21 +27,21 @@ export function WelcomeSection() {
     "build real-time data pipelines",
   ]);
 
-	const onClick = (e) => scrollToEl(e);
+  const onClick = (e) => scrollToEl(e);
 
-	useEffect(() => {
-		let interval = setInterval(() => {
-			setCount(count + 1);
+  useEffect(() => {
+    let interval = setInterval(() => {
+      setCount(count + 1);
 
-			if (count === 7) {
-				setCount(0);
-			}
-		}, 2000);
+      if (count === 7) {
+        setCount(0);
+      }
+    }, 2000);
 
-		return () => clearInterval(interval);
-	}, [count]);
+    return () => clearInterval(interval);
+  }, [count]);
 
-	return (
+  return (
     <LazyMotion features={domAnimation}>
       <section id="intro" className="section" ref={introRef}>
         <ParticlesBg />
@@ -124,15 +123,15 @@ export function WelcomeSection() {
                 aria-label="Latest projects"
                 style={
                   //change color of button to #29cce9
-                  { 
-                    backgroundColor: "#29cce9", color: "black",
-
-                   }
-
+                  {
+                    backgroundColor: "#29cce9",
+                    color: "black",
+                  }
                 }
               >
                 See my latest projects
-              </Link> &nbsp;
+              </Link>{" "}
+              &nbsp;
               <a
                 href="/assets/resume.pdf"
                 className="resume"
@@ -140,10 +139,10 @@ export function WelcomeSection() {
                 download="resume.pdf" // Add the 'download' attribute with the desired file name
                 style={
                   //change color of button to #29cce9
-                  { 
-                    backgroundColor: "#29cce9", color: "black",
-
-                     }
+                  {
+                    backgroundColor: "#29cce9",
+                    color: "black",
+                  }
                 }
               >
                 Check out my resume!
@@ -159,23 +158,23 @@ export function WelcomeSection() {
 }
 
 function TextElement({ element }) {
-	const firstWord = <b>{element.split(" ").at(0)}</b>;
-	const restWords = element.split(" ").slice(1).join(" ");
-	const ref = useRef(null);
-	const isInView = useInView(ref, { once: true });
+  const firstWord = <b>{element.split(" ").at(0)}</b>;
+  const restWords = element.split(" ").slice(1).join(" ");
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
-	return (
-		<span
-			tabIndex="0"
-			ref={ref}
-			className="text-[17px] md:text-2xl"
-			style={{
-				transform: isInView ? "none" : "translateX(-200px)",
-				opacity: isInView ? 1 : 0,
-				transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-			}}
-		>
-			{firstWord} {restWords}
-		</span>
-	);
+  return (
+    <span
+      tabIndex="0"
+      ref={ref}
+      className="text-[17px] md:text-2xl"
+      style={{
+        transform: isInView ? "none" : "translateX(-200px)",
+        opacity: isInView ? 1 : 0,
+        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+      }}
+    >
+      {firstWord} {restWords}
+    </span>
+  );
 }
