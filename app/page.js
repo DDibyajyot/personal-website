@@ -13,9 +13,9 @@ export default function Page() {
     <div className="container-md">
       <WelcomeSection />
       <AboutSection />
+      <TechnologiesSection />
       <ExperienceSection />
       <ProjectsSection />
-      <TechnologiesSection />
     </div>
   );
 }

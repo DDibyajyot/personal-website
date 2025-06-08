@@ -32,5 +32,16 @@
       "Created REST APIs in MuleSoft/SoapUI and Axios for security audits, dynamic update of user info and database communication.",
       "Developed real-time deployment portal, resulting in 225% faster response time to road-side emergencies."
     ]
+  },
+  {
+    "_id": "4",
+    "JobTitle": "Data Engineer",
+    "Company": "OmniBiz",
+    "DateTime": "Sep 2024 - Present",
+    "DescriptionPoints": [
+      "Designed a predictive procurement model using Python and TensorFlow, outperforming ARIMA by 27% in accuracy and boosting forecast reliability by 30%.",
+      "Streamlined data integration with Snowflake and optimized SQL pipelines, reducing query time by 45% and ETL processing time by 35%.",
+      "Built Tableau dashboards and delivered KPI reports, reducing stockouts by 18% and cutting overstock costs by 15% through data-driven decisions."
+    ]
   }
 ]

@@ -28,6 +28,6 @@ export const SOCIAL_MEDIA = [
     id: "instagram",
     icon: <BsInstagram />,
     title: "Visit Instagram profile",
-    url: "www.instagram.com/naturallydeepam/",
+    url: "https://www.instagram.com/naturallydeepam/",
   },
 ];
