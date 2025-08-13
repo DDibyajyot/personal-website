@@ -1,19 +1,19 @@
-import { useCallback } from "react";
+import { useCallback, memo } from "react";
 import Particles from "react-particles";
-import { loadFull } from "tsparticles";
+import { loadSlim } from "tsparticles-slim"; // Use slim version instead of full
 import particlesJSON from "particles.json";
 
-const ParticlesBg = () => {
+const ParticlesBg = memo(() => {
   const particlesInit = useCallback(async (engine) => {
-    console.log(engine);
-    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    await loadFull(engine);
+    // Use loadSlim instead of loadFull to reduce bundle size
+    await loadSlim(engine);
   }, []);
 
   const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
+    // Remove console.log in production for better performance
+    if (process.env.NODE_ENV === 'development') {
+      console.log(container);
+    }
   }, []);
 
   return (
@@ -22,8 +22,11 @@ const ParticlesBg = () => {
       init={particlesInit}
       loaded={particlesLoaded}
       options={particlesJSON}
+      style={{ position: 'absolute', inset: 0, zIndex: -1 }}
     />
   );
-};
+});
+
+ParticlesBg.displayName = 'ParticlesBg';
 
 export default ParticlesBg;

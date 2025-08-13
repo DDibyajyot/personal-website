@@ -1,22 +1,17 @@
 import { Suspense, useRef } from "react";
 import { useInView } from "framer-motion";
 import Link from "next/link";
-import ImageGallery from "react-image-gallery";
+import Image from "next/image";
 import { Loader } from "components";
 import { VscSourceControl } from "react-icons/vsc";
 import { FiExternalLink } from "react-icons/fi";
-
-import "react-image-gallery/styles/css/image-gallery.css";
 
 export function ProjectItem({ project, index }) {
   const { description, images, liveUrl, repoUrl, stack, title } = project;
   const cardRef = useRef(null);
   const isInView = useInView(cardRef, { once: true });
 
-  const galleryImages = images.map((img) => ({
-    original: img,
-    loading: "lazy",
-  }));
+  const mainImage = images[0]; // Use first image as main image
 
   return (
     <article
@@ -34,16 +29,18 @@ export function ProjectItem({ project, index }) {
         }ms`,
       }}
     >
-      <figure>
-        <div className="aspect-[3/2] w-full h-full">
+      <figure className="relative overflow-hidden rounded-t-lg">
+        <div className="aspect-[3/2] w-full relative">
           <Suspense fallback={<Loader />}>
-            <ImageGallery
-              items={galleryImages}
-              showPlayButton={false}
-              showThumbnails={false}
-              showIndex
-              lazyload
-              additionalClass="gallery-item"
+            <Image
+              src={mainImage}
+              alt={`${title} project screenshot`}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="object-cover transition-transform duration-300 hover:scale-105"
+              loading="lazy"
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
             />
           </Suspense>
         </div>

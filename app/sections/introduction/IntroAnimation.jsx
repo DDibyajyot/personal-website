@@ -61,7 +61,7 @@ export function WelcomeAnimation() {
         height={680}
         scale={1.25} // No scaling
         entropy={23} // Keep original entropy value
-        maxParticles={7000}
+        maxParticles={5000}
         creationDuration={0} // Particles will appear instantly without growing
         creationTimingFn={() => 1} // Particles reach full size immediately
         particleOptions={particleOptions} // Include updated particle options
