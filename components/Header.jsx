@@ -17,10 +17,16 @@ export function AppHeader() {
       <div className="container-md">
         <div className="flex justify-between items-center">
           <Logo />
-          {isMobile ? <MobileMenu /> : <Menu />}
-          <div className="flex items-center gap-5">
-            {!isMobile && <ConnectMedia />}
-          </div>
+          {isMobile ? (
+            <MobileMenu />
+          ) : (
+            <>
+              <Menu />
+              <div className="flex items-center gap-5">
+                <ConnectMedia />
+              </div>
+            </>
+          )}
         </div>
       </div>
     </header>

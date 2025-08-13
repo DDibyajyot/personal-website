@@ -115,42 +115,41 @@ export function WelcomeSection() {
               }}
             >
               <br></br>
-              <Link
-                href="#projects"
-                onClick={onClick}
-                tabIndex="0"
-                className="btn"
-                aria-label="Latest projects"
-                style={
-                  //change color of button to #29cce9
-                  {
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                <Link
+                  href="#projects"
+                  onClick={onClick}
+                  tabIndex="0"
+                  className="btn flex-1 sm:flex-initial"
+                  aria-label="Latest projects"
+                  style={{
                     backgroundColor: "#29cce9",
                     color: "black",
-                  }
-                }
-              >
-                See my latest projects
-              </Link>{" "}
-              &nbsp;
-              <a
-                href="/assets/resume.pdf"
-                className="resume"
-                aria-label="Latest resume"
-                download="resume.pdf" // Add the 'download' attribute with the desired file name
-                style={
-                  //change color of button to #29cce9
-                  {
+                  }}
+                >
+                  See my latest projects
+                </Link>
+                <a
+                  href="/assets/resume.pdf"
+                  className="resume flex-1 sm:flex-initial"
+                  aria-label="Latest resume"
+                  download="resume.pdf"
+                  style={{
                     backgroundColor: "#29cce9",
                     color: "black",
-                  }
-                }
-              >
-                Check out my resume!
-              </a>
+                  }}
+                >
+                  Check out my resume!
+                </a>
+              </div>
             </div>
           </div>
 
-          {isTabletUp && <WelcomeAnimation className="particleimage" />}
+          {isTabletUp && (
+            <div className="hidden md:block">
+              <WelcomeAnimation className="particleimage" />
+            </div>
+          )}
         </div>
       </section>
     </LazyMotion>

@@ -42,7 +42,7 @@ export function MobileMenu() {
       <AnimatePresence>
         {isOpen && (
           <m.div
-            className={`backdrop-blur-md fixed left-0 right-0 top-0 min-h-screen z-50`}
+            className={`backdrop-blur-md fixed inset-0 min-h-screen z-50 bg-black/80`}
             initial={initialMobile}
             animate={animateMobile}
             exit={exitMobile}

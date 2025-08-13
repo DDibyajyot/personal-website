@@ -13,24 +13,24 @@ export default function ExperiencePanel() {
       }}
     >
       <Tab.Group>
-        <Tab.List
-          className="flex p-1 space-x-1 bg-blue-900/20 rounded-xl"
-          style={{
-            width: "100%", // Set the width to 100% for all screen sizes
-          }}
-        >
+        <Tab.List className="flex flex-col sm:flex-row p-1 space-y-1 sm:space-y-0 sm:space-x-1 bg-blue-900/20 rounded-xl">
           {experiences.map((experience) => (
             <Tab
               key={experience._id}
               className={({ selected }) =>
-                `flex-1 px-4 py-2 text-sm font-medium rounded-lg ${
+                `flex-1 px-2 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-lg text-center whitespace-nowrap overflow-hidden text-ellipsis ${
                   selected
                     ? "text-black bg-[#29cce9] transition-all duration-300 ease-in-out"
                     : "text-blue-100 hover:bg-blue-500 hover:text-black transition-all duration-300 ease-in-out"
                 }`
               }
             >
-              {experience.Company}
+              <span className="block sm:hidden">
+                {experience.Company.split(' ')[0]}
+              </span>
+              <span className="hidden sm:block">
+                {experience.Company}
+              </span>
             </Tab>
           ))}
         </Tab.List>
@@ -49,9 +49,9 @@ export default function ExperiencePanel() {
               <div className="flex flex-col md:flex-row">
                 <div className="md:ml-6 mt-4 md:mt-0">
                   <h2 className="text-2xl">{experience.JobTitle}</h2>
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                     <h3 className="text-white">{experience.Company}</h3>
-                    <div className="flex items-end text-right text-white text-lg">
+                    <div className="text-white text-sm sm:text-lg">
                       {experience.DateTime}
                     </div>
                   </div>
