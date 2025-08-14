@@ -25,7 +25,7 @@ export function AboutSection() {
           >
             <img
               src="/assets/projects/deep.png" // Replace with the actual path to your image
-              alt="Deepam's Image"
+              alt="Deepam Dibyajyot - Software Developer and Computer Science Student at University of Waterloo"
               className="w-120 h-80 rounded mx-auto mb-12" // Adjust size and styling as needed
             />
             <p>

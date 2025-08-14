@@ -138,8 +138,11 @@ export function WelcomeSection() {
                 <a
                   href="/assets/resume.pdf"
                   className="resume flex-1 sm:flex-initial"
-                  aria-label="Latest resume"
-                  download="resume.pdf"
+                  aria-label="Download Deepam's professional resume - Software Developer with expertise in React, Next.js, and Machine Learning"
+                  title="Deepam's Professional Resume - Software Developer & ML Engineer"
+                  download="Deepam_Software_Developer_Resume.pdf"
+                  rel="noopener"
+                  target="_blank"
                   style={{
                     backgroundColor: "#29cce9",
                     color: "black",
