@@ -27,7 +27,7 @@ import {
   SiPostman,
   SiMysql,
   SiPostgresql,
-  SiAmazonaws,
+  SiAmazonwebservices,
   SiPython,
   SiJavascript,
   SiC,
@@ -94,7 +94,7 @@ export const TECHNOLOGIES = [
   {
     category: "Other tools",
     items: [
-      { name: "AWS", icon: <SiAmazonaws size={32} /> },
+      { name: "AWS", icon: <SiAmazonwebservices size={32} /> },
       { name: "MySQL", icon: <SiMysql size={32} /> },
       { name: "PostgreSQL", icon: <SiPostgresql size={32} /> },
       { name: "Jira", icon: <JiraIcon width={32} /> },

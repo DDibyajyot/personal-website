@@ -1,4 +1,4 @@
-export { AppMetadata } from "./AppMetadata";
+export { AppMetadata, viewport } from "./AppMetadata";
 export { AppHeader } from "./Header";
 export { AppFooter } from "./Footer";
 export { Loader } from "./Loader";
