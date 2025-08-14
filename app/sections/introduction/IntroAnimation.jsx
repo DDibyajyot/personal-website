@@ -3,7 +3,7 @@ import { useTheme } from "next-themes";
 import * as React from "react";
 import dynamic from "next/dynamic";
 
-// Dynamically import ParticleImage to reduce initial bundle size
+// Dynamically import ParticleImage to reduce initial bundle size and defer loading
 const ParticleImage = dynamic(() => import("react-particle-image"), {
   ssr: false,
   loading: () => (
@@ -16,16 +16,17 @@ const ParticleImage = dynamic(() => import("react-particle-image"), {
 // Import specific utilities directly
 import { Vector, forces } from "react-particle-image";
 
-// Particle options
+// Optimized particle options for better performance
 const particleOptions = {
   filter: ({ x, y, image }) => {
+    // Reduce filter complexity to decrease main thread work
     const pixel = image.get(x, y);
-    return pixel.b > 50;
+    return pixel.b > 60; // Slightly higher threshold for fewer particles
   },
   color: () => "white",
-  radius: () => Math.random() * 1.5 + 0.5,
-  mass: () => 40,
-  friction: () => 0.15,
+  radius: () => Math.random() * 1.2 + 0.4, // Smaller particles for better performance
+  mass: () => 35, // Reduced mass for lighter calculations
+  friction: () => 0.18, // Slightly higher friction for quicker settling
   initialPosition: ({ canvasDimensions, finalPosition }) => {
     return (
       finalPosition ||
@@ -47,11 +48,11 @@ export function WelcomeAnimation() {
   // State to track whether the fade-in should happen
   const [isVisible, setIsVisible] = useState(false);
 
-  // Effect to handle the fade-in after 1 second
+  // Delay animation to improve LCP - start after critical content loads
   useEffect(() => {
     const timeout = setTimeout(() => {
-      setIsVisible(true); // Set visibility to true after 1 second
-    }, 1000);
+      setIsVisible(true); // Set visibility to true after delay
+    }, 1500); // Increased delay to allow LCP to complete
     return () => clearTimeout(timeout); // Cleanup on component unmount
   }, []);
 
@@ -70,7 +71,7 @@ export function WelcomeAnimation() {
         height={680}
         scale={1.25} // No scaling
         entropy={23} // Keep original entropy value
-        maxParticles={4000} // Reduced from 5000 for better performance while maintaining visual appeal
+        maxParticles={3000} // Further reduced for better main-thread performance
         creationDuration={0} // Particles will appear instantly without growing
         creationTimingFn={() => 1} // Particles reach full size immediately
         particleOptions={particleOptions} // Include updated particle options

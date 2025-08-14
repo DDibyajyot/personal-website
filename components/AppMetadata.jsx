@@ -13,6 +13,9 @@ export const AppMetadata = {
   icons: {
     icon: "/favicon.png",
   },
+  other: {
+    'preload': '/favicon.png',
+  },
   keywords: [
     "Deepam Dibyajyot",
     "Deepam Dibyajyot - software developer",
