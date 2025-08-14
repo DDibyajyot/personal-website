@@ -1,11 +1,20 @@
 import { useRef, useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import * as React from "react";
-import ParticleImage, {
-  ParticleOptions,
-  Vector,
-  forces,
-} from "react-particle-image";
+import dynamic from "next/dynamic";
+
+// Dynamically import ParticleImage to reduce initial bundle size
+const ParticleImage = dynamic(() => import("react-particle-image"), {
+  ssr: false,
+  loading: () => (
+    <div className="flex items-center justify-center w-[680px] h-[680px]">
+      <div className="animate-pulse bg-gray-300 dark:bg-gray-700 rounded-full w-32 h-32"></div>
+    </div>
+  ),
+});
+
+// Import specific utilities directly
+import { Vector, forces } from "react-particle-image";
 
 // Particle options
 const particleOptions = {
@@ -61,7 +70,7 @@ export function WelcomeAnimation() {
         height={680}
         scale={1.25} // No scaling
         entropy={23} // Keep original entropy value
-        maxParticles={5000}
+        maxParticles={4000} // Reduced from 5000 for better performance while maintaining visual appeal
         creationDuration={0} // Particles will appear instantly without growing
         creationTimingFn={() => 1} // Particles reach full size immediately
         particleOptions={particleOptions} // Include updated particle options

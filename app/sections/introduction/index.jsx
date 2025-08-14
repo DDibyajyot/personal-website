@@ -6,7 +6,13 @@ import { LazyMotion, domAnimation, useInView } from "framer-motion";
 import { WelcomeAnimation } from "./IntroAnimation";
 import { useScrollTo } from "hooks";
 import { useMediaQuery } from "utils";
-import ParticlesBg from "components/ParticlesBackground.jsx";
+import dynamic from "next/dynamic";
+
+// Dynamically load ParticlesBg to improve initial load performance
+const ParticlesBg = dynamic(() => import("components/ParticlesBackground.jsx"), {
+  ssr: false,
+  loading: () => null, // No loading component to avoid layout shift
+});
 
 export function WelcomeSection() {
   const ref = useRef(null);
