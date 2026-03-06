@@ -17,13 +17,13 @@ const ParticleImage = dynamic(() => import("react-particle-image"), {
 import { Vector, forces } from "react-particle-image";
 
 // Optimized particle options for better performance
-const particleOptions = {
+const createParticleOptions = (isDark) => ({
   filter: ({ x, y, image }) => {
     // Reduce filter complexity to decrease main thread work
     const pixel = image.get(x, y);
     return pixel.b > 60; // Slightly higher threshold for fewer particles
   },
-  color: () => "white",
+  color: () => isDark ? "white" : "black",
   radius: () => Math.random() * 1.2 + 0.4, // Smaller particles for better performance
   mass: () => 35, // Reduced mass for lighter calculations
   friction: () => 0.18, // Slightly higher friction for quicker settling
@@ -34,7 +34,7 @@ const particleOptions = {
     );
   },
   initialVelocity: () => new Vector(0, 0),
-};
+});
 
 // Force interactions on mouse movement
 const motionForce = (x, y) => forces.disturbance(x, y, 5);
@@ -66,6 +66,7 @@ export function WelcomeAnimation() {
       }}
     >
       <ParticleImage
+        key={darkThemeColor ? "dark" : "light"}
         src={"/favicon.png"}
         width={680}
         height={680}
@@ -74,11 +75,11 @@ export function WelcomeAnimation() {
         maxParticles={3000} // Further reduced for better main-thread performance
         creationDuration={0} // Particles will appear instantly without growing
         creationTimingFn={() => 1} // Particles reach full size immediately
-        particleOptions={particleOptions} // Include updated particle options
+        particleOptions={createParticleOptions(darkThemeColor)} // Include updated particle options
         mouseMoveForce={motionForce}
         touchMoveForce={motionForce}
         backgroundColor={
-          darkThemeColor ? "rgba(0, 0, 0, 0)" : "rgba(255, 255, 255, 0)"
+          darkThemeColor ? "rgba(0, 0, 0, 0)" : "rgba(255, 249, 230, 0)"
         }
       />
     </div>

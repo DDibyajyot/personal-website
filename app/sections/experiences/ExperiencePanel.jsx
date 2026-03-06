@@ -21,7 +21,7 @@ export default function ExperiencePanel() {
                 `flex-1 px-2 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-lg text-center whitespace-nowrap overflow-hidden text-ellipsis ${
                   selected
                     ? "text-black bg-[#29cce9] transition-all duration-300 ease-in-out"
-                    : "text-blue-100 hover:bg-blue-500 hover:text-black transition-all duration-300 ease-in-out"
+                    : "text-brand-dark dark:text-blue-100 hover:bg-blue-500 hover:text-black transition-all duration-300 ease-in-out"
                 }`
               }
             >
@@ -48,17 +48,17 @@ export default function ExperiencePanel() {
             >
               <div className="flex flex-col md:flex-row">
                 <div className="md:ml-6 mt-4 md:mt-0">
-                  <h2 className="text-2xl">{experience.JobTitle}</h2>
+                  <h2 className="text-2xl text-brand-dark dark:text-brand-light">{experience.JobTitle}</h2>
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                    <h3 className="text-white">{experience.Company}</h3>
-                    <div className="text-white text-sm sm:text-lg">
+                    <h3 className="text-brand-dark dark:text-white">{experience.Company}</h3>
+                    <div className="text-brand-dark dark:text-white text-sm sm:text-lg">
                       {experience.DateTime}
                     </div>
                   </div>
 
                   <div className="flex flex-col md:flex-row md:space-x-4">
                     <div className="flex-1 mt-2 space-y-2 text-sm">
-                      <ul className="text-white text-lg list-disc">
+                      <ul className="text-brand-dark dark:text-white text-lg list-disc">
                         {experience.DescriptionPoints.map((point) => (
                           <li key={point} className="mb-2">
                             {point}

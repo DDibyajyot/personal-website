@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { AppHeader, AppFooter, AppMetadata, viewport as appViewport } from "components";
+import { AppHeader, AppFooter, AppMetadata, viewport as appViewport, FloatingThemeSwitcher } from "components";
 import Loading from "./loading";
 import "styles/globals.css";
 import { ThemeContext } from "context";
@@ -57,6 +57,7 @@ export default function RootLayout({ children }) {
           <AppHeader />
           <Suspense fallback={<Loading />}>{children}</Suspense>
           <AppFooter />
+          <FloatingThemeSwitcher />
         </ThemeContext>
       </body>
     </html>

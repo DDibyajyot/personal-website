@@ -69,7 +69,7 @@ export function WelcomeSection() {
               </p>
             </h1>
 
-            <div className="mt-3 relative flex flex-col overflow-hidden">
+            <div className="mt-3 relative overflow-hidden h-[55px] md:h-[65px]">
               <p
                 ref={ref}
                 className="text-[17px] md:text-2xl transform-none opacity-100"
@@ -87,23 +87,22 @@ export function WelcomeSection() {
                       count === 0
                         ? "0"
                         : count === 1
-                        ? "-100%"
+                        ? "-60px"
                         : count === 2
-                        ? "-200%"
+                        ? "-120px"
                         : count === 3
-                        ? "-300%"
+                        ? "-180px"
                         : count === 4
-                        ? "-400%"
+                        ? "-240px"
                         : count === 5
-                        ? "-500%"
+                        ? "-300px"
                         : count === 6
-                        ? "-600%"
+                        ? "-360px"
                         : count === 7
-                        ? "-700%"
-                        : count === 8
-                        ? "-800%"
+                        ? "-420px"
                         : "0",
                     left: "13px",
+                    maxWidth: "calc(100% - 20px)",
                   }}
                 >
                   {text.map((element) => (
@@ -136,7 +135,7 @@ export function WelcomeSection() {
                   See my latest projects
                 </Link>
                 <a
-                  href="/assets/resume.pdf"
+                  href="/assets/resume.pdf" 
                   className="resume flex-1 sm:flex-initial"
                   aria-label="Download Deepam's professional resume - Software Developer with expertise in React, Next.js, and Machine Learning"
                   title="Deepam's Professional Resume - Software Developer & ML Engineer"
@@ -175,11 +174,15 @@ function TextElement({ element }) {
     <span
       tabIndex="0"
       ref={ref}
-      className="text-[17px] md:text-2xl"
+      className="text-[17px] md:text-2xl inline-block"
       style={{
         transform: isInView ? "none" : "translateX(-200px)",
         opacity: isInView ? 1 : 0,
         transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        height: "60px",
+        lineHeight: "1.4",
+        verticalAlign: "top",
+        maxWidth: "calc(100% - 20px)",
       }}
     >
       {firstWord} {restWords}
