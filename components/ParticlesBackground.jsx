@@ -28,7 +28,7 @@ const ParticlesBg = memo(() => {
       background: {
         ...particlesJSON.background,
         color: {
-          value: isDark ? "#000" : "#FFF9E6"
+          value: isDark ? "#000" : "#EDE8E0"
         }
       },
       particles: {

@@ -50,33 +50,16 @@ export function AboutSection() {
             <p>
               I'm actively seeking a co-op/internship opportunity for Spring
               2025. Check out my resume{" "}
-              <a className="about-me" href="/assets/resume.pdf">
+              <a className="underline bg-brand-dark text-brand-light dark:bg-brand-light dark:text-brand-dark px-[5px] py-[3px] transition-colors duration-300 hover:no-underline hover:bg-transparent hover:text-brand-dark dark:hover:text-brand-light" href="/assets/resume.pdf">
                 here
               </a>{" "}
               and feel free to reach out to{" "}
-              <a className="about-me" href="mailto:dibyajyotdeepam@gmail.com">
+              <a className="underline bg-brand-dark text-brand-light dark:bg-brand-light dark:text-brand-dark px-[5px] py-[3px] transition-colors duration-300 hover:no-underline hover:bg-transparent hover:text-brand-dark dark:hover:text-brand-light" href="mailto:dibyajyotdeepam@gmail.com">
                 me
               </a>
               !<br></br>
               (P.S I'm all ears for any book, anime, or music recommendations!)
             </p>
-            <style jsx>
-              {`
-                a.about-me {
-                  text-decoration: underline;
-                  background-color: white;
-                  color: black;
-                  padding: 3px 5px; /* Adjust padding as needed */
-                  transition: background-color 0.3s, color 0.3s;
-                }
-
-                a.about-me:hover {
-                  text-decoration: none;
-                  background-color: transparent;
-                  color: white;
-                }
-              `}
-            </style>
           </div>
         </div>
       </section>

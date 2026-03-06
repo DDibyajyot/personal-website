@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          light: "#FFF9E6",
+          light: "#EDE8E0",
           dark: "#232332",
           purple: "#7928CA",
           pink: "#FF0080",
@@ -21,12 +21,12 @@ module.exports = {
           normal: "#025091",
         },
         card: {
-          dark: "rgba(255, 255, 255, 0.04)",
-          light: "rgba(255, 255, 255, 0.80)",
+          dark: "rgba(255, 230, 195, 0.07)",
+          light: "rgba(180, 160, 135, 0.25)",
         },
         badge: {
-          dark: "rgba(226, 232, 240, 0.16)",
-          light: "#F8F0E3",
+          dark: "rgba(255, 230, 195, 0.15)",
+          light: "rgba(160, 140, 115, 0.2)",
         },
       },
       transitionTimingFunction: {
